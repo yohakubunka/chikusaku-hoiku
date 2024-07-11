@@ -1,0 +1,74 @@
+#mv-section {
+    padding: 80px 0 80px 0;
+    @include sm {
+        padding: 60px 0 40px 0;
+    }
+    .mainvisual {
+        position: relative;
+        margin-bottom: 80px;
+        @include sm {
+            margin-bottom: 64px;
+        }
+        &__image {
+            @include sp {
+                object-fit: cover;
+            }
+        }
+        .coara {
+            position: absolute;
+            z-index: 1;
+            right: 48px;
+            bottom: -20px;
+            max-width: 280px;
+            width: 100%;
+            @include lg {
+                max-width: 200px;
+                bottom: 10px;
+            }
+            @include sm {
+                right: 16px;
+                bottom: 25px;
+                max-width: 136px;
+            }
+        }
+        .catch-copy {
+            position: absolute;
+            z-index: 2;
+            bottom: -80px;
+            right: 0;
+            background-color: $color6;
+            padding: 24px 40px;
+            border-radius: 20px 0 0 20px;
+            color: $color1;
+            @include sm {
+                padding: 16px;
+                bottom: -64px;
+                max-width: 288px;
+                width: 100%;
+                border-radius: 10px 0 0 10px;
+            }
+            &__top {
+                margin: 0;
+                color: $color1;
+                @extend %mplus-48-b-b;
+                @include sm {
+                    margin-bottom: 8px;
+                }
+            }
+            .h2_text {
+                margin: 0;
+                @include sm {
+                    font-size: 1.6rem;
+                }
+            }
+        }
+    }
+    .under_green {
+        background: $color10;
+        padding: 88px 0;
+        @include flex($align: center, $justify: center);
+        h1 {
+            color: $color6;
+        }
+    }
+}

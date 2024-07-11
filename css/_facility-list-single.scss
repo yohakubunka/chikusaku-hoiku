@@ -1,0 +1,99 @@
+#single-facility {
+    .tag-area {
+        color: $color3;
+        @include flex($justify: center);
+        margin-bottom: 16px;
+        &__type {
+            margin-right: 24px;
+        }
+    }
+    img {
+        border-radius: 20px;
+        @include sm {
+            border-radius: 10px;
+        }
+    }
+    .title-intro {
+        text-align: center;
+        h2 {
+            margin-bottom: 40px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        &__text {
+            max-width: 736px;
+            width: 100%;
+            margin: 0 auto;
+            margin-bottom: 40px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+    }
+    .facility-info {
+        margin-top: 40px;
+        @include sm {
+            margin-top: 24px
+        }
+        &__row {
+            @include flex();
+            margin-bottom: 8px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include sm {
+                flex-direction: column;
+            }
+            &--head {
+                background-color: $color7;
+                color: $color1;
+                max-width: 155px;
+                width: 100%;
+                border-radius: 10px;
+                padding: 8px 0;
+                margin-right: 4px;
+                @include flex($align: center, $justify: center);
+                @include sm {
+                    max-width: 100%;
+                    margin-bottom: 8px;
+                    margin-right: 0;
+                }
+            }
+            &--text {
+                width: 100%;
+                background-color: $color1;
+                padding: 8px 16px;
+                border-radius: 10px;
+            }
+            .accept_age {
+                line-height: 2em;
+            }
+        }
+    }
+    .buttons {
+        margin-top: 48px;
+        margin-bottom: 40px;
+        @include flex($justify: center);
+        @include sm {
+            flex-direction: column;
+            align-items: center;
+            margin-top: 32px;
+            margin-bottom: 24px;
+        }
+    }
+    .google-map {
+        border-radius: 20px;
+        -webkit-border-radius: 20px;
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        @include sm {
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+        }
+        iframe {
+            width: 100%;
+        }
+    }
+}

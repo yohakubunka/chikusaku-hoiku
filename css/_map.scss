@@ -1,0 +1,19 @@
+.map-link {
+    &:hover {
+        g {
+            path {
+                fill: #1B9944;
+                opacity: 1;
+            }
+            .map-2 {
+                fill: $color1;
+            }
+        }
+    }
+    g {
+        path,
+        .map-2 {
+            transition: 0.3s;
+        }
+    }
+}

@@ -1,0 +1,98 @@
+#facility_list {
+    .fixweed {
+        .right-weed {
+            bottom: 24px;
+        }
+    }
+    h2 {
+        margin-bottom: 24px;
+    }
+    .area-select {
+        @include sm {
+            padding: 0 24px;
+        }
+        .map-svg {
+            @include sm {
+                width: 100%;
+                height: auto;
+            }
+            @include sp {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .map-sp {
+            display: none;
+            @include sp {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+        &__list {
+            .h2_text {}
+        }
+    }
+    .facility-area {
+        margin-top: 64px;
+        .h2_text {
+            text-align: center;
+        }
+        .post-count {
+            display: inline-block;
+            margin-left: 24px;
+            @include sm {
+                margin-left: 16px;
+            }
+        }
+        .facility-cards {
+            @include flex();
+            flex-wrap: wrap;
+            margin: calc(-40px / 2);
+            margin-bottom: calc(64px - 20px);
+            @include lg {
+                margin: calc(-16px / 2);
+                margin-bottom: 32px;
+            }
+            .facility-card {
+                display: inline-block;
+                background-color: $color1;
+                border-radius: 20px;
+                padding: 24px;
+                width: calc(100% / 2 - 40px);
+                margin: calc(40px / 2);
+                text-align: right;
+                @include lg {
+                    padding: 16px;
+                    border-radius: 10px;
+                    width: 100%;
+                    margin: calc(16px / 2);
+                }
+                .h2_text {
+                    text-align: left;
+                    margin-bottom: 8px;
+                }
+                &__terms {
+                    @include flex();
+                    margin-bottom: 8px;
+                    color: $color3;
+                    flex-wrap: wrap;
+                    &--type {
+                        margin-right: 24px;
+                    }
+                }
+                svg {
+                    width: 32px;
+                    height: auto;
+                }
+            }
+        }
+        .lastcard {
+            margin-bottom: -20px;
+            @include sm {
+                margin-bottom: -8px;
+            }
+        }
+    }
+}

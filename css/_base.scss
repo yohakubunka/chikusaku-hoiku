@@ -1,0 +1,406 @@
+html {
+    font-size: 10px!important;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'RoundedMplus';
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+    color: $color5;
+    background-color: $color8;
+    @include sm {
+        font-size: 1.6rem;
+    }
+}
+
+.page-width {
+    max-width: 1000px;
+    width: 100%;
+    padding: 0 16px;
+    margin: 0 auto;
+}
+
+section {
+    padding: 80px 0;
+    @include sm {
+        padding: 40px 0;
+    }
+}
+
+.top_head {
+    @include flex($align: center);
+    margin-bottom: 64px;
+    position: relative;
+    @include sm {
+        margin-bottom: 40px;
+        flex-direction: column;
+    }
+    &:before {
+        border-top: 4px solid $color3;
+        content: "";
+        width: 100%;
+        position: absolute;
+        right: calc(100% - -16px);
+        @include xl {
+            content: none;
+        }
+    }
+    svg {
+        margin-right: 16px;
+        @include sm {
+            width: 32px;
+            height: auto;
+            margin: 0 0 4px 0
+        }
+    }
+}
+
+.orange-border {
+    background-color: $color3;
+    width: 100%;
+    height: 4px;
+}
+
+h1 {
+    @extend %mplus-48-b-b;
+    color: $color3;
+}
+
+h2 {
+    @extend %mplus-32-b-b;
+    color: $color5;
+    margin-bottom: 64px;
+    @include sm {
+        margin-bottom: 40px
+    }
+}
+
+.logo_text {
+    @extend %mplus-32-logo-b;
+    color: $color6;
+}
+
+.text-center {
+    text-align: center;
+}
+
+// ボタン設定
+.orange-border-button {
+    max-width: 320px;
+    height: 64px;
+    @include flex($align: center, $justify: center);
+    border: solid 4px $color3;
+    border-radius: 20px;
+    color: $color3;
+    background-color: $color8;
+    @extend %mplus-32-b-b;
+    transition: 0.3s;
+    margin: 0 auto;
+    margin-top: 48px;
+    &:hover {
+        background-color: $color3;
+        color: $color1;
+    }
+    @include sm {
+        max-width: 253px;
+        height: 51px;
+        border-radius: 10px;
+        margin-top: 32px;
+    }
+}
+
+// ボタン設定
+.orange-border-button-icon {
+    max-width: 360px;
+    width: 100%;
+    height: 64px;
+    @include flex($align: center, $justify: center);
+    border: solid 4px $color3;
+    border-radius: 20px;
+    color: $color3;
+    background-color: $color8;
+    @extend %mplus-32-b-b;
+    transition: 0.3s;
+    &:hover {
+        background-color: $color3;
+        color: $color1;
+        .color-reverse {
+            fill: $color1;
+        }
+    }
+    &:first-child {
+        margin-right: 40px;
+        @include sm {
+            margin-right: 0;
+            margin-bottom: 24px;
+        }
+    }
+    @include sm {
+        max-width: 253px;
+        border-radius: 10px;
+        height: 51px;
+    }
+    svg {
+        margin-right: 8px;
+        @include sm {
+            max-width: 24px;
+            width: 100%;
+            height: auto;
+        }
+    }
+}
+
+img {
+    width: 100%;
+    height: auto;
+}
+
+svg {
+    display: inline-block;
+}
+
+.accordion_child {
+    display: none;
+}
+
+.open {
+    svg {
+        transform: rotate(180deg);
+    }
+}
+
+.pc {
+    @include sm {
+        display: none;
+    }
+}
+
+.xpc {
+    @include sp {
+        display: none;
+    }
+}
+
+.sp {
+    display: none;
+    @include sm {
+        display: block;
+    }
+}
+
+.xsp {
+    display: none;
+    @include sp {
+        display: block;
+    }
+}
+
+//お問い合わせページとフッターの電話番号とメール
+.two-info {
+    @include flex($justify: center);
+    color: $color6;
+    @include sm {
+        flex-direction: column;
+    }
+    &__left {
+        // border-right: solid 4px $color6;
+        // padding-right: 40px;
+        text-align: center;
+        @include sm {
+            border: none;
+            padding: 0;
+        }
+        .h2_text {
+            margin-bottom: 8px;
+        }
+        &--tell {
+            @include flex($align: center, $justify: center);
+            svg {
+                margin-right: 8px;
+                @include sm {
+                    margin-right: 4px;
+                    max-width: 24px;
+                    width: 100%;
+                }
+            }
+        }
+        &--text {
+            margin-top: 4px;
+        }
+    }
+    &__right {
+        padding-left: 40px;
+        text-align: center;
+        @include sm {
+            padding: 0;
+        }
+        .h2_text {
+            margin-bottom: 8px;
+        }
+        &--tell {
+            @include flex($align: center, $justify: center);
+            svg {
+                margin-right: 8px;
+                @include sm {
+                    margin-right: 4px;
+                    max-width: 24px;
+                    width: 100%;
+                }
+            }
+        }
+        &--text {
+            margin-top: 8px;
+            &:last-child {
+                @include sm {
+                    margin-top: 4px;
+                }
+            }
+        }
+    }
+}
+
+// 背景画像指定
+.background-area {
+    position: relative;
+    .left-flower {
+        position: absolute;
+        left: calc(-86px - 16px);
+        top: 0;
+        z-index: 5;
+        @include xl {
+            display: none!important;
+        }
+    }
+    .right-weed {
+        position: absolute;
+        right: calc(-78px - 16px);
+        bottom: 0;
+        z-index: 5;
+        @include xl {
+            display: none!important;
+        }
+    }
+    .left_weed_2 {
+        position: absolute;
+        left: calc(-45px - 16px);
+        bottom: 0;
+        z-index: 5;
+        @include xl {
+            display: none!important;
+        }
+    }
+    .right_weed_2 {
+        position: absolute;
+        right: calc(-45px - 16px);
+        bottom: 0;
+        z-index: 5;
+        @include xl {
+            display: none!important;
+        }
+    }
+    .right-weed-2 {
+        position: absolute;
+        right: calc(-51px - 16px);
+        bottom: 0;
+        z-index: 5;
+        @include xl {
+            display: none!important;
+        }
+    }
+}
+
+// エリアマップとエリア選択
+.area-select {
+    text-align: center;
+    &__list {
+        @include flex();
+        flex-wrap: wrap;
+        width: 100%;
+        margin: 0 auto;
+        margin-top: 40px;
+        margin-bottom: -24px;
+        @include sm {
+            max-width: 258px;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+        .right-brown-arrow {
+            @include flex($align: center);
+            white-space: nowrap;
+            margin-left: 40px;
+            &:hover {
+                background: linear-gradient(transparent 75%, $color11 50%);
+                @include sm {
+                    background: none;
+                }
+            }
+            @include sm {
+                max-width: 113px;
+                width: 100%;
+                margin-left: 0;
+            }
+            svg {
+                display: inline-block;
+                width: 32px;
+                height: auto;
+                margin-left: 16px;
+                @include sm {
+                    margin-left: 8px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+// メインビジュアル
+.mv-section {
+    padding: 80px 0 16px 0;
+    @include sm {
+        padding: 60px 0 16px 0;
+    }
+    .under_green {
+        width: 100%;
+        background-color: $color10;
+        height: 320px;
+        @include flex($align: center, $justify: center);
+        h1 {
+            color: $color6;
+            margin-bottom: 0;
+        }
+    }
+}
+
+// 2カラムコンテンツ
+.two-column {
+    @include flex();
+    @include lg {
+        flex-direction: column;
+    }
+    &__left {
+        max-width: 408px;
+        width: 100%;
+        margin-right: 40px;
+        @include lg {
+            max-width: 100%;
+            margin-right: 0;
+            margin-bottom: 32px;
+        }
+    }
+    &__right {
+        max-width: 520px;
+        width: 100%;
+        @include lg {
+            max-width: 100%;
+        }
+        img {
+            border-radius: 20px;
+            @include sm {
+                border-radius: 10px;
+            }
+        }
+    }
+}

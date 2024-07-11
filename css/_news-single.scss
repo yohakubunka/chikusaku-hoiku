@@ -1,0 +1,32 @@
+#single {
+  padding-top: 80px;
+  .single-news {
+    .single-content {
+      width: 100%;
+      max-width: 710px;
+      margin: 0 auto;
+      &__time {
+        @include flex(0, center);
+        flex-wrap: wrap;
+        margin-bottom: 16px;
+        .title-cat__date {
+          margin-right: 24px;
+        }
+        a {
+          border: solid 2px $color3;
+          padding: 0 16px;
+          color: $color3;
+          border-radius: 100px;
+        }
+      }
+      &__text {
+        p {
+          margin-top: 16px;
+        }
+        figure {
+          padding-top: 16px;
+        }
+      }
+    }
+  }
+}

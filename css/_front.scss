@@ -1,0 +1,98 @@
+#section_top_search {
+    h2 {
+        margin-bottom: 24px;
+        @include sm {
+            margin-bottom: 16px;
+        }
+    }
+    .area-select {
+        @include sm {
+            padding: 0 24px;
+        }
+        .map-svg {
+            @include sm {
+                width: 100%;
+                height: auto;
+            }
+            @include sp {
+                display: none;
+                width: 100%;
+                height: auto;
+            }
+        }
+        .map-sp {
+            display: none;
+            @include sp {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+#section_top_news {
+    .front-news-area {
+        &__row {
+            @include flex($align: center);
+            margin-bottom: 24px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+            @include sm {
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 16px;
+            }
+            .data-category {
+                @include flex($align: center);
+                @include sm {
+                    margin-bottom: 8px;
+                }
+                @include sp {
+                    flex-wrap: wrap;
+                }
+                &__date {
+                    color: $color6;
+                    margin-right: 24px;
+                    @include sm {
+                        margin-right: 16px;
+                    }
+                }
+                &__category {
+                    color: $color1;
+                    background-color: $color6;
+                    padding: 4px 16px;
+                    border-radius: 100px;
+                    margin-right: 24px;
+                    white-space: nowrap;
+                    @include sm {
+                        padding: 4px 8px;
+                    }
+                }
+            }
+            .title-icon {
+                @include flex();
+                justify-content: space-between;
+                width: 100%;
+                &__title {
+                    @include lines-truncate(1);
+                    text-align: left;
+                    width: 100%;
+                    @include sm {
+                        @include lines-truncate(2);
+                    }
+                }
+                svg {
+                    margin-left: 8px;
+                    max-width: 24px;
+                    width: 100%;
+                    height: auto;
+                    @include sm {
+                        width: 16px;
+                    }
+                }
+            }
+        }
+    }
+}

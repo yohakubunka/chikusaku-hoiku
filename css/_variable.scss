@@ -1,0 +1,24 @@
+//色設定
+$color1: #ffffff;
+$color2: #000000;
+$color3: #ff531a;
+$color4: #DDBA2A;
+$color5: #765a33;
+$color6: #1b9944;
+$color7: rgba(27, 153, 68, 0.7);
+$color8: #f7f6f1;
+$color9: rgba(247, 246, 241, 0.95);
+$color10: rgba(27, 153, 68, 0.18);
+$color11: rgba(255, 83, 26, 0.5);
+//break point
+$break-point_xl: 1200px;
+$break-point_lg: 1024px;
+$break-point-md: 768px;
+$break-point-sp: 540px;
+$break-point-xs: 375px;
+// @include xl { (1200px) } PCの最小
+// @include lg { (1024px) } タブレット横
+// @include md { (768px) }　タブレット縦
+// @include sm { (767px) }　タブレット-スマホ
+// @include sp { (540px) }　スマホ-iPhoneX
+// @include xs { (375px) }　スマホ-iPhone5/6

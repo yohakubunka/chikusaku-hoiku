@@ -1,0 +1,72 @@
+.footer {
+    background-color: $color6;
+    text-align: center;
+    margin-top: 80px;
+    @include sm {
+        margin-top: 40px;
+    }
+    .footer-wrap {
+        position: relative;
+        padding: 80px 0 24px 0;
+        color: $color1;
+        @include sm {
+            padding: 64px 0 16px 0;
+        }
+        #page_top {
+            position: absolute;
+            right: 0;
+            top: -32px;
+            @include lg {
+                right: 16px;
+            }
+            @include sm {
+                top: -24px;
+            }
+            svg {
+                @include sm {
+                    max-width: 40px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+    &__logo {
+        margin-bottom: 40px;
+        color: $color1;
+        @include sm {
+            margin-bottom: 32px;
+        }
+    }
+    .two-info {
+        color: $color1;
+        padding-bottom: 40px;
+        @include sm {
+            padding-bottom: 64px;
+        }
+        &__left {
+            border-color: $color1;
+        }
+    }
+    &__nav {
+        margin-bottom: 40px;
+        @include sm {
+            margin: 0;
+        }
+        .footer_links {
+            @include flex($align: center, $justify: center);
+            @include sm {
+                display: none;
+            }
+            &__item {
+                margin: 0 24px;
+                @include sm {
+                    display: none;
+                }
+            }
+        }
+    }
+    .copy-text {
+        @extend %mplus-12-b-b;
+    }
+}

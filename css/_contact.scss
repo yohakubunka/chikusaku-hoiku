@@ -1,0 +1,29 @@
+#contact-info {
+    .two-info {
+        &__left {
+            border: none;
+        }
+    }
+}
+
+#contact-form {
+    .caution-text {
+        p {
+            text-indent: -1.4em;
+            margin-left: 1.4em;
+            &:before {
+                content: '';
+                display: inline-block;
+                width: 16px;
+                height: 16px;
+                background: $color6;
+                border-radius: 50%;
+                vertical-align: -1px;
+                margin-right: 8px;
+                @include sm {
+                    vertical-align: -2px;
+                }
+            }
+        }
+    }
+}

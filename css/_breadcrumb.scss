@@ -1,0 +1,16 @@
+.bread-wrap {
+    position: relative;
+    .breadcrumb {
+        @include flex($align: center);
+        @extend %mplus-12-l-b;
+        position: absolute;
+        top: -64px;
+        @include sm {
+            top: -24px;
+        }
+        .bread-line {
+            margin: 0 8px 0 4px;
+            display: inline-block;
+        }
+    }
+}

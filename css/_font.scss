@@ -1,0 +1,65 @@
+@font-face {
+    font-family: 'RoundedMplus';
+    src: local('RoundedMplus Regular'), /* フォントがローカルにインストールされている場合に有効 */
+    url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
+    url('../fonts/MPLUSRounded1c-Medium.woff') format('woff'), /* woff - Modern Browsers */
+    url('../fonts/MPLUSRounded1c-Medium.ttf') format('truetype'), /* ttf - Safari, Android, iOS */
+    url('webfont.svg#svgFontName') format('svg');
+    /* svg - Legacy iOS */
+}
+
+@font-face {
+    font-family: 'RoundedMplus-l';
+    src: local('RoundedMplus-l Regular'), /* フォントがローカルにインストールされている場合に有効 */
+    url('webfont.eot?#iefix') format('embedded-opentype'), /* eof - IE6-IE8 */
+    url('../fonts/MPLUSRounded1c-Regular.woff') format('woff'), /* woff - Modern Browsers */
+    url('../fonts/MPLUSRounded1c-Regular.ttf') format('truetype'), /* ttf - Safari, Android, iOS */
+    url('webfont.svg#svgFontName') format('svg');
+    /* svg - Legacy iOS */
+}
+
+%mplus-48-b-b {
+    font-size: 4.8rem;
+    letter-spacing: 0.08em;
+    @include xl {
+        font-size: 4rem;
+    }
+    @include sm {
+        font-size: 2.4rem;
+    }
+}
+
+%mplus-32-b-b {
+    font-size: 3.2rem;
+    letter-spacing: 0.08em;
+    @include sm {
+        font-size: 2rem;
+    }
+}
+
+%mplus-32-logo-b {
+    font-size: 3.2rem;
+    letter-spacing: 0.08em;
+    @include sm {
+        font-size: 2.4rem;
+    }
+}
+
+%mplus-12-b-b {
+    font-size: 1.2rem;
+}
+
+.h2_text {
+    @extend %mplus-32-b-b;
+    margin-bottom: 24px;
+    @include sm {
+        margin-bottom: 16px;
+    }
+}
+
+%mplus-12-l-b {
+    font-family: "RoundedMplus-l";
+    font-size: 1.2rem;
+    line-height: 1.5;
+    letter-spacing: 0.08em;
+}

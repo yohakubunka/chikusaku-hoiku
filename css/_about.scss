@@ -1,0 +1,111 @@
+#about-sec01 {
+    .about-text {
+        text-align: center;
+        @include sm {
+            margin-bottom: 24px;
+        }
+        &__head {
+            margin-bottom: 40px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        &__sentence {
+            margin-bottom: 40px;
+            @include sm {
+                margin-bottom: 24px;
+            }
+        }
+        img {
+            border-radius: 20px;
+            @include sm {
+                border-radius: 10px;
+            }
+        }
+    }
+}
+
+#about-sec02 {
+    h2 {
+        margin-bottom: 40px;
+        text-align: center;
+        @include sm {
+            margin-bottom: 24px;
+        }
+    }
+    .two-column {
+        &__left {
+            p {
+                margin-bottom: 16px;
+                text-indent: -1.4em;
+                margin-left: 1.4em;
+                @include sm {
+                    text-indent: -1.5em;
+                    margin-left: 1.5em;
+                }
+                &:before {
+                    content: '';
+                    display: inline-block;
+                    width: 16px;
+                    height: 16px;
+                    background: $color6;
+                    border-radius: 50%;
+                    vertical-align: -1px;
+                    margin-right: 8px;
+                    @include sm {
+                        vertical-align: -2px;
+                    }
+                }
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                svg {
+                    margin-right: 8px;
+                    max-width: 16px;
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}
+
+#about-sec03 {
+    h2 {
+        text-align: center;
+        margin-bottom: 40px;
+        @include sm {
+            margin-bottom: 24px;
+        }
+    }
+    .group-buttons {
+        @include flex();
+        flex-wrap: wrap;
+        margin: 0 calc(-40px / 2);
+        @include lg {
+            flex-direction: column;
+            align-items: center;
+            margin: calc(-24px / 2) 0;
+        }
+        &__button {
+            width: calc(100% / 2 - 40px);
+            margin: 0 calc(40px / 2);
+            background-color: $color1;
+            @include flex($align: center, $justify: center);
+            padding: 24px 0;
+            border-radius: 20px;
+            @include lg {
+                max-width: 464px;
+                width: 100%;
+                margin: calc(24px / 2) 0;
+                border-radius: 10px;
+            }
+            @include sm {
+                padding: 16px 0;
+            }
+            svg {
+                margin-left: 8px;
+            }
+        }
+    }
+}
