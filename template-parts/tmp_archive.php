@@ -11,9 +11,13 @@
                     <?php $news_count = 1; ?>
                     <!-- トップページのお知らせから遷移してきたときにアコーディオンをオープン状態にするための処理 -->
                     <!-- ゲットパラメータで送られてきたpost_numが入っている、かつ、パラメーターと$news_countが一致したときにopenクラス付与 -->
+                    <?php
+$post_num_exists = isset($_GET['post_num']);
+$post_num = $post_num_exists ? $_GET['post_num'] : null;
+?>
                     <?php if (have_posts()) : ?>
                         <?php while (have_posts()) :  the_post() ?>
-                            <?php if ($_GET['post_num'] &&  $_GET['post_num'] == $news_count || $news_count == 1 && !$_GET['post_num']) : ?>
+                            <?php if (($post_num_exists && $post_num == $news_count) || ($news_count == 1 && !$post_num_exists)) : ?>
                                 <div class="accordion news-area__content open" id="news_count<?= $news_count ?>">
                                 <?php else : ?>
                                     <div class="accordion news-area__content" id="news_count<?= $news_count ?>">
